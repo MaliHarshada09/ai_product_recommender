@@ -1,0 +1,228 @@
+```json
+{
+  "Insurance Products": [
+    {
+      "Product Name": "Activ Health - Platinum Enhanced",
+      "Target Customer": "Corporate professionals",
+      "Key Benefits": [
+        "Wide range of cover from `2 lac - `2 crore",
+        "Earn up to 30% premium as HealthReturns™",
+        "Day 1 cover for Chronic Illnesses",
+        "100% Reload of Sum Insured",
+        "Cumulative Bonus upto 20% of sum insured for every claim free year",
+        "Free annual health check up from 1st year"
+      ],
+      "Coverage Highlights": [
+        "60 days of pre and 180 days of post-hospitalisation coverage",
+        "Road ambulance expenses covered",
+        "527 Day Care procedures covered",
+        "Automatic upgrade to Chronic Management Program",
+        "Covers tests, consultation and medicines under CMP",
+        "Wellness coaches to guide healthy choices"
+      ],
+      "Ideal Use Case": "Individuals seeking comprehensive health coverage with wellness benefits and chronic disease management."
+    },
+    {
+      "Product Name": "Aditya Birla Sun Life Insurance Akshaya Plan",
+      "Target Customer": "All Individuals (Male | Female | Transgender)",
+      "Key Benefits": [
+        "Financial Security for your loved ones: Comprehensive life cover available for up to 100 years.",
+        "Choice of 2 Benefit Options: Flexibility to choose amongst two Benefit Options i.e. Long Term Income and Whole Life Income (Till Age 100 or Till Age 85)",
+        "Flexible Bonus Payouts: Complete flexibility to receive Cash Bonus (if declared) – for immediate liquidity or to accumulate the Cash Bonus (if declared) till policy maturity – for long term wealth creation.",
+        "Customizable Benefits: Option to enhance Your insurance cover through riders, which are available at a nominal extra cost."
+      ],
+      "Coverage Highlights": [
+        "Death Benefit",
+        "Survival Benefit",
+        "Maturity Benefit",
+        "Optional Rider Benefits: Accidental Death, Critical Illness, Surgical Care, Hospital Care, Waiver of Premium"
+      ],
+      "Ideal Use Case": "Individuals seeking a life insurance plan with a regular source of income to ensure fulfillment of their family's growing needs."
+    },
+    {
+      "Product Name": "Aditya Birla Sun Life Insurance Nishchit Aayush Plan",
+      "Target Customer": "All Individuals (Male | Female | Transgender)",
+      "Key Benefits": [
+        "Choice of Benefit Option: Long Term Income or Whole Life Income",
+        "Guaranteed Income from 1st /2nd /3rd /4th /5th /6th Policy Anniversary till end of policy term",
+        "Guaranteed Lump sum Benefit at maturity of the policy",
+        "Flexibility: To build your own plan with choice of income benefit, income variant, premium payment term, policy term and deferment period",
+        "Protection with life cover across policy term"
+      ],
+      "Coverage Highlights": [
+        "Death Benefit",
+        "Survival Benefit: guaranteed income",
+        "Maturity Benefit: guaranteed lump sum",
+        "Optional Rider Benefits: Accidental Death, Critical Illness, Surgical Care, Hospital Care, Waiver of Premium"
+      ],
+      "Ideal Use Case": "Individuals seeking guaranteed regular income and lump sum benefits along with life insurance cover."
+    },
+    {
+      "Product Name": "Care Health Insurance Personal Accident Cover with TTD plus",
+      "Target Customer": "Individuals aged 18 to 64",
+      "Key Benefits": [
+        "Security & Stability when you need it",
+        "Accidental Death :Pays a lumpsum amount of 100% of the Sum Insured to the nominated family member in the event of a tragic loss.",
+        "Permanent Total Disablement (PTD): Pays between 50 to 100 percent of the sum insured, based on severity of injury and loss due to the accident",
+        "Permanent Partial Disablement (PPD): Pays a pre-defined percentage of the sum insured, based on severity of loss due to the accident.",
+        "Fractures:In the event of a fracture, Care Health will provide you coverage within the range of 30% to 100% of your sum insured",
+        "Burns:If you suﬀer from burns due to accident, get coverage of sum insured in the range 10% to 100% depending on the degree of burn",
+        "Reconstructive Surgery: Coverage for expenses pertaining to a surgery, advised by your medical practitioner in case of an accident.",
+        "Child Education:In the event of an accident resulting in insured’s demise or PTD, we’ll take care of child’s education"
+      ],
+      "Coverage Highlights": [
+        "Optional Covers: Mobility Cover, Disappearance, Repatriation of Mortal Remains, Loyalty Benefit",
+        "Optional Covers: Nursing Care, Major Diagnostics Tests, Domestic Road Ambulance, Accidental Hospitalization Expenses",
+        "Temporary Total Disablement/Temporary Total Disablement Plus: When you suﬀer from an injury that would conﬁne you to the bed for a temporary basis your medical expenses as well your ﬁnancial concerns will be taken care oﬀ until you make a full recovery."
+      ],
+      "Ideal Use Case": "Individuals looking for comprehensive personal accident insurance with coverage for death, disablement, fractures, burns, and child education."
+    },
+{
+"Product Name": "Care Advanced - CHIHLIA25043V012425",
+"Target Customer": "Proposer must have a Retail Policy from Care Health Insurance Ltd in order to buy this Add-on",
+"Key Benefits": [
+    "Option to build your own plan with choice of income benefit, income variant, premium payment term, policy term and deferment period.",
+   " Get Assured Protection",
+    "Protection with life cover across policy term"
+ ],
+"Coverage Highlights": [
+     "Inflation Shield",
+     "No Claim Bonus Shield",
+    "PED Wait Period Modification",
+    "Named Ailments Wait Period Modification",
+    "Initial Wait Period Modification",
+    "Return of Premium",
+    "Policyholder-Child Protection",
+    "Spouse Care",
+    "Additional Sum Insured for Defined Critical Illnesses",
+    "Plus Benefit",
+    "Assisted Reproductive Treatment",
+    "Modification of Robotic Surgery",
+    "Be-fit+",
+    "Instant Cover",
+    "Waiver of Proportional Charges",
+    "Durable Medical Equipment",
+    "Maternity Cover",
+    "Surrogacy Care",
+    "Oocyte Care",
+    "Unlimited Care",
+    "Cumulative Bonus Booster",
+    "Room Rent Modification"
+ ],
+"Ideal Use Case": "Individuals who want to customize their regular income requirements as per their goals. "
+},
+{
+"Product Name": "Care Plus",
+"Target Customer": "Adult: Lifelong | Child: 24 years.  Individual: Maximum up to 6 persons.  Floater: 1A1C / 1A2C / 1A3C / 1A4C / 2A / 2A1C / 2A2C / 2A3C / 2A4C",
+"Key Benefits": [
+    "Unlimited recharge of Sum Insured that can be utilized by same person for same illness",
+    "Up to 200% increase in base Sum Insured",
+   "Inflation adjusted increase in Sum Insured every year",
+    "Personal accident coverage for primary insured member",
+    "Stay fit and earn reward points through earn & burn program"
+ ],
+"Coverage Highlights": [
+    "Hospitalization Expenses: In-Patient Care, Day Care Treatments, Advance Technology Methods",
+    "Ambulance Cover",
+   "Organ Donor Cover",
+    "Domiciliary Hospitalization",
+    "Second Opinion",
+    "Annual Health Check-up",
+    "Unlimited Automatic Recharge",
+    "AYUSH Treatments",
+    "Air Ambulance Cover"
+ ],
+"Ideal Use Case": "Individuals who want the security of their health and resultant happiness should be their prerogative for life. "
+},
+{
+"Product Name": "HDFC Life Click 2 Protect Supreme Plus",
+"Target Customer": "Adult - 18 to 84 years",
+"Key Benefits": [
+   " Increasing Life Cover for Life Stages ",
+   " Additional benefits available under the Product"
+ ],
+"Coverage Highlights": [
+    "Three different plan options.",
+    "Death Benefit",
+   "Survival/Maturity Beneﬁt",
+    "Health and wellness benefits."
+ ],
+"Ideal Use Case": "Individuals who seek Enhanced protection. Protection coverage with rider options "
+},
+{
+"Product Name": "ICICI Pru Guaranteed Wealth Protector",
+"Target Customer": "All Individuals who want high returns with guaranteed benefits",
+"Key Benefits": [
+     "Invest in the market without fear",
+    "Get assured benefits",
+  "Protect your savings from market downturns through an Assured Benefit",
+  "Pay premium just once or for a limited period of 5 or 7 years",
+  "Get rewarded with Loyalty Additions and Wealth Booster",
+   "Get tax benefits on premiums paid and benefits received, as per prevailing  T&C 2   tax laws"
+ ],
+"Coverage Highlights": [
+     "Death Benefit",
+   " Investment returns"
+ ],
+"Ideal Use Case": "Individuals who want high returns with a life insurance policy"
+},
+{
+"Product Name": "ICICI Pru iProtect Return of Premium",
+"Target Customer": "All Individuals and especially Women",
+"Key Benefits": [
+       "Payout for your family in your absence",
+     "Payout to you in case of 34 major illnesses like Heart Attack, Cancer, Kidney Failure, etc. (optional*)",
+     "Enhanced protection: Coverage against death, terminal illness and disability",
+   " Comprehensive additional benefits: Option to choose Accidental Death Benefit and Accelerated Critical Illness Benefit",
+  " Special premium rates for non-tobacco users",
+   " Need based benefit payout: Choose to receive the benefit amount as a lump sum or as monthly income for 10 years or a combination of both",
+ " Flexibility to pay premiums once, for a limited period or throughout the policy term",
+  "Tax Benefits may be applicable on premiums paid and benefits received as per the prevailing tax laws"
+ ],
+"Coverage Highlights": [
+         "Accidental Death Benefit",
+"Get coverage to help with life’s uncertainties! Choose lump sum or installments",
+         "Life Stage Protection",
+          "Health and wellness benefits"
+ ],
+"Ideal Use Case": "Individuals who want Comprehensive financial protection and life cover."
+},
+{
+"Product Name": "ICICI Pru Lakshya",
+"Target Customer": "Those who want to achieve bigger goals",
+"Key Benefits": [
+"Protection of life cover throughout the policy term",
+"Increase your savings with the applicable Guaranteed Value Beneﬁts",
+"Liquidity during the policy term to help you in case of ﬁnancial emergencies",
+"Convenient options to pay your premiums in annual, half-yearly or monthly frequency",
+"Tax beneﬁts may be applicable on premiums paid and beneﬁts received as 
+per prevailing tax laws"
+ ],
+"Coverage Highlights": [
+"1. Protection of life cover throughout the policy term",
+"2. Increase your savings with the applicable Guaranteed Value Beneﬁts",
+"3. Liquidity during the policy term to help you in case of ﬁnancial emergencies",
+"4. Convenient options to pay your premiums in annual, half-yearly or monthly frequency",
+"5. Tax beneﬁts may be applicable on premiums paid and beneﬁts received as 
+per prevailing tax laws"
+ ],
+"Ideal Use Case": "Those who want a ﬂexible plan to help meet various financial needs with an option to take payout"
+},
+{
+"Product Name": "ICICI Pru Lifetime Classic",
+"Target Customer": "A plan with the potential to maximizeyour returns and your dreams. It offers you a life insurance cover to protect your family in case of your 
+unfortunate demise along with multiple choices on how to invest to help you achieve your financial goals.",
+"Key Benefits": [
+    "This plan offers you a life insurance cover to protect your family in case of your unfortunate demise along with multiple choices on how to invest to help you achieve your financial goals",
+  "  Automatic Transfer Strategy (ATS)*",
+  "Choice of 4 
+portfolio strategies#"
+ ],
+"Coverage Highlights": [
+   "Death and Survival Benefits"
+ ],
+"Ideal Use Case": "A product, this Life Time Classic, which has multiple choices on how to invest to help you achieve your financial goals."
+}
+  ]
+}
+```
