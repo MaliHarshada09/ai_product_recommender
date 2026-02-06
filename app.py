@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 import subprocess
 
 # -------------------------------
-# LOAD API KEY
+# LOAD API KEY NeW
 # -------------------------------
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
