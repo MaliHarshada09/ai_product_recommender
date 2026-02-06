@@ -1,20 +1,13 @@
 import streamlit as st
 import os
 import time
-import json
-from google import genai
 import datetime
-from dotenv import load_dotenv
-import subprocess
+from google import genai
 
 # -------------------------------
-# LOAD API KEY NeW
+# LOAD API KEY (STREAMLIT CLOUD)
 # -------------------------------
-load_dotenv()
-API_KEY = os.getenv("API_KEY")
-
-if not API_KEY:
-    raise ValueError("API_KEY not found in .env file")
+API_KEY = st.secrets["API_KEY"]
 
 # -------------------------------
 # CONFIGURATION
@@ -42,7 +35,6 @@ REQUEST_COOLDOWN = 10
 
 
 def generate_with_retry(call_fn):
-    """Retry Gemini call on 429 errors."""
     for attempt in range(MAX_RETRIES):
         try:
             return call_fn()
@@ -59,7 +51,6 @@ def generate_with_retry(call_fn):
 
 
 def check_cooldown():
-    """Prevent rapid repeated requests."""
     last_time = st.session_state.get("last_request_time", 0)
     current_time = time.time()
 
@@ -82,67 +73,25 @@ def load_kb_summary():
     return None
 
 
+def build_kb_summary():
+    """Simple fallback summary builder for cloud."""
+    text_data = []
+    for file in os.listdir(DOCS_FOLDER):
+        path = os.path.join(DOCS_FOLDER, file)
+        if file.endswith(".txt"):
+            with open(path, "r", encoding="utf-8") as f:
+                text_data.append(f.read())
 
-def format_insurance_output(data):
-    output = []
+    summary = "\n\n".join(text_data)
 
-    # Customer Profile
-    profile = data.get("customer_profile", {})
-    output.append("CUSTOMER PROFILE")
-    output.append("-" * 30)
-    output.append(f"Age: {profile.get('age', 'N/A')}")
-    output.append(f"Gender: {profile.get('gender', 'N/A')}")
-    output.append(f"Location: {profile.get('location', 'N/A')}")
-    output.append(f"Health Conditions: {profile.get('health_conditions', 'N/A')}")
-    output.append("")
-
-    # Insurance Needs
-    output.append("INSURANCE NEEDS")
-    output.append("-" * 30)
-    for need in data.get("insurance_needs", []):
-        output.append(f"- {need}")
-    output.append("")
-
-    # Recommended Products
-    output.append("RECOMMENDED PRODUCTS")
-    output.append("=" * 40)
-
-    for i, product in enumerate(data.get("recommended_products", []), start=1):
-        output.append(f"\n{i}) {product.get('Product Name', 'N/A')}")
-        output.append("-" * 40)
-        output.append(f"Target Customer: {product.get('Target Customer', 'N/A')}")
-        output.append("")
-
-        # Key Benefits
-        output.append("Key Benefits:")
-        for benefit in product.get("Key Benefits", []):
-            output.append(f"  • {benefit}")
-
-        # Coverage Highlights
-        output.append("\nCoverage Highlights:")
-        for highlight in product.get("Coverage Highlights", []):
-            output.append(f"  • {highlight}")
-
-        # Ideal Use Case
-        output.append("\nIdeal Use Case:")
-        output.append(f"  {product.get('Ideal Use Case', 'N/A')}")
-        output.append("")
-
-    return "\n".join(output)
+    with open(KB_FILE, "w", encoding="utf-8") as f:
+        f.write(summary)
 
 
 # -------------------------------
 # APP UI
 # -------------------------------
 st.title("🛡️ Insurance Product Recommendation AI")
-st.markdown("""
-This tool analyzes customer calls and recommends insurance products.
-
-**Steps:**
-1. Place product PDFs or text files in the `data` folder.
-2. Click **Rebuild Knowledge Base**.
-3. Upload a customer audio call and run analysis.
-""")
 
 # -------------------------------
 # SIDEBAR
@@ -153,7 +102,7 @@ with st.sidebar:
     if st.button("🔄 Rebuild Knowledge Base"):
         with st.spinner("Building knowledge base summary..."):
             try:
-                subprocess.run(["python", "build_summary.py"], check=True)
+                build_kb_summary()
                 st.success("Knowledge base rebuilt successfully.")
             except Exception as e:
                 st.error(f"Failed to build knowledge base: {e}")
@@ -165,7 +114,7 @@ with st.sidebar:
 
 
 # -------------------------------
-# MAIN FLOW (NO COLUMNS)
+# MAIN FLOW
 # -------------------------------
 uploaded_audio = st.file_uploader(
     "Upload Customer Call",
@@ -190,13 +139,13 @@ if uploaded_audio:
                 f.write(uploaded_audio.getbuffer())
 
             try:
-                with st.status("Analyzing...", expanded=True) as status:
-                    st.write("Uploading audio...")
+                with st.status("Analyzing...", expanded=True):
                     customer_audio = client.files.upload(file=temp_path)
 
                     current_date = datetime.date.today().strftime("%B %d, %Y")
 
-                    full_prompt = f"""TODAY'S DATE: {current_date}
+                    full_prompt = f"""
+TODAY'S DATE: {current_date}
                 KNOWLEDGE BASE: {kb_summary}
                 
                 You are an AI-powered insurance advisor assistant.
@@ -290,25 +239,12 @@ TASK STEPS
                             contents=[full_prompt, customer_audio],
                             config={
                                 "temperature": 0,
-                                "top_p": 1,
-                                "top_k": 1,
                                 "max_output_tokens": 800
-                                
                             }
                         )
                     )
 
-                    status.update(
-                        label="Analysis Complete!",
-                        state="complete",
-                        expanded=False
-                    )
-
                 st.subheader("📋 AI Recommendation Report")
-
-                # formatted_output = format_insurance_output(response.text)
-                
-                
                 st.markdown(response.text)
 
             except Exception as e:
@@ -317,11 +253,3 @@ TASK STEPS
             finally:
                 if os.path.exists(temp_path):
                     os.remove(temp_path)
-
-
-# -------------------------------
-# FOOTER
-# -------------------------------
-if os.path.exists(KB_FILE):
-    st.divider()
-    st.caption("Knowledge base loaded from local summary file.")
